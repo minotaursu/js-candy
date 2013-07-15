@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8"/>
+    <title>demo</title>
+    <link herf="some.css" rel="stylesheet"/>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <style>
+        .man{
+            width:750px;
+            margin-left:auto;
+            margin-right:auto;
+            background-color:#EFF;
+            position: relative;
+            overflow: hidden;
+        }
+        .bg{
+            float:left;
+        }
+        .bg:after{
+            clear: both;
+            content: " ";
+        }
+        .title{
+            width: 200px;
+            float: right;
+            margin: 80px 60px;
+        }
+        .title:after{
+            clear: both;
+            content: " ";
+        }
+        div img{
+            width: 400px;
+            height: 600px;
+        }
+        .img{
+            position: absolute;
+            width: 150px;
+            height: 200px;
+            overflow: hidden;
+        }
+        .glass{
+            bottom: 0px;
+            right:0px;
+            background-image: url("mm.jpg");
+            background-position: -135px -20px;
+        }
+        .mirror{
+            top: 0px;
+            left: 0px;
+            cursor: pointer;
+            background: rgba(139,131,120,0.5);
+            z-index: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="man">
+        <div id="bg" class="bg">
+           <img src="mm.jpg">
+        </div>
+        <div id="title" class="title">
+            <label>拖拽浮层,右下角小图会显示浮层所覆盖的图片</label>
+        </div>
+        <div id="img" class="img glass">
+        </div>
+        <div id="mirror" class="img mirror">
+        </div>
+    </div>
+    <script type="text/javascript" src="cutcat.js">
+    </script>
+</body>
+</html>
